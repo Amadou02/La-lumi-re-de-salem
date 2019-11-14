@@ -1,0 +1,13 @@
+font-face {
+    font-family: "hobbiton";
+    src: url("hobbiton.ttf") format("ttf"),
+  }
+#image_header {
+    width: 100%;
+    height: 30rem;
+}
+h1 {
+    text-align: center;
+    font-family: "hobbiton";
+    display: block;
+}
