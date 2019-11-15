@@ -23,10 +23,19 @@ h1 {
 	flex-direction: column;
 }
 #fb{
-	color: #4267b2;
+	size: 20px; 
 	
 }
 #tw {
-	color: #6699FF;
+	size: 20px;
 	
+}
+.modal-body{
+	text-align: justify;
+}
+#txt {
+	text-align: justify;
+}
+#At {
+	text-align: center;
 }
