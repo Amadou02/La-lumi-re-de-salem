@@ -7,7 +7,7 @@
   <title>La lumière de Salem</title>
 </head>
 <body>
-
+  <!-- début de la barre de navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-info d-flex justify-content-between">
     <a class="navbar-brand" href="#">La lumière de Salem</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,38 +37,330 @@
       </form>
     </div>
   </nav>
-
-<div class="card-deck d-flex">
-  <div class="col-lg-12 col-md-12 col-12 justify-content-center mb-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-5 col-md-5 col-12 pt-4">
-        <div class="card">
-          <img alt="img_newproduct" class="card-img-top" src="assets/img/cristaux.jpg">
-          <div class="card_text_index card-body bg-white text-center text-info">
-            <h4 class="card-title">Découvrez nos nouveaux produits</h4>
+<!-- groupe de cartes -->
+  <div class="card-deck d-flex">
+    <div class="col-lg-12 col-md-12 col-12 justify-content-center mb-5">
+      <div class="row justify-content-center">
+        <!-- carte nouveaux produits -->
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_newproduct" class="card-img-top" src="assets/img/cristaux.jpg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "nouveaux produits" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseNewItems" aria-expanded="false" aria-controls="collapseNewItems">
+                  Nos nouveaux produits
+                </a>
+              </p>
+              <div class="collapse" id="collapseNewItems">
+                <div class="card card-body">
+                  Derniers ajouts produits
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-5 col-md-5 col-12 pt-4">
-        <div class="card">
-          <img alt="img_flash" class="card-img-top" src="assets/img/fireworks.jpg">
-          <div class="card_text_index card-body bg-white text-center text-info">
-            <h4 class="card-title">Ventes flash</h4>
+        <!-- carte "ventes flash" -->
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_flash" class="card-img-top" src="assets/img/fireworks.jpg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "ventes flash" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseFlash" aria-expanded="false" aria-controls="collapseFlash">
+                  Ventes flash!
+                </a>
+              </p>
+              <div class="collapse" id="collapseFlash">
+                <div class="card card-body">
+                  Voir
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        <!-- carte "catégories" -->
         <div class="col-lg-5 col-md-5 col-12 pt-4">
           <div class="card">
             <img alt="img_categories" class="card-img-top" src="assets/img/witchcraft.jpg">
             <div class="card_text_index card-body bg-white text-center text-info">
-              <h4 class="card-title">Catégories</h4>
+              <!-- bouton "catégories" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
+                  Catégories
+                </a>
+              </p>
+              <div class="collapse" id="collapseCat">
+                <div class="card card-body">
+                  Nos produits
+                </div>
+              </div>
             </div>
           </div>
-      </div>
-  </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_potion" class="card-img-top" src="assets/img/potion.jpg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "Les décoctions" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapsePotion" aria-expanded="false" aria-controls="collapsePotion">
+                  Décoctions
+                </a>
+              </p>
+              <div class="collapse" id="collapsePotion">
+                <div class="card card-body">
+                  Voir
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_harbalism" class="card-img-top" src="assets/img/herbalism.jpg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "herboristerie" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseHerb" aria-expanded="false" aria-controls="collapseHerb">
+                  Herboristerie
+                </a>
+              </p>
+              <div class="collapse" id="collapseHerb">
+                <div class="card card-body">
+                  Nos herbes séchées
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_library" class="card-img-top" src="assets/img/library.jpg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "Librairie" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseLibrary" aria-expanded="false" aria-controls="collapseLibrary">
+                  Librairie
+                </a>
+              </p>
+              <div class="collapse" id="collapseLibrary">
+                <div class="card card-body">
+                  Nos ouvrages
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_artefacts" class="card-img-top" src="assets/img/incensecandles.jpeg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "artefacts" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseArtefacts" aria-expanded="false" aria-controls="collapseArtefacts">
+                  Artefacts
+                </a>
+              </p>
+              <div class="collapse" id="collapseArtefacts">
+                <div class="card card-body">
+                  Nos produits
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_livre1" class="card-img-top" src="assets/img/livre1.jpg">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "livre1" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseLivre1" aria-expanded="false" aria-controls="collapseLivre1">
+                  Le guide complet des huiles essentielles
+                </a>
+              </p>
+              <div class="collapse" id="collapseLivre1">
+                <div class="card card-body bg-white">
+                  Les huiles essentielles sont un moyen simple et naturel de soigner les petits maux du quotidien. Leur efficacité dans les domaines de la santé, du bien-être et de la beauté n'est plus à démontrer. Découvrez dans cet ouvrage pratique les principes de l'aromathérapie et ses modes d'utilisation : en inhalation, en application locale, en massage... 200 huiles essentielles pour les maux du quotidien ; Les conseils d'utilisation ; 80 huiles essentielles rares.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_livre2" class="card-img-top" src="assets/img/livre2.png">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "livre2" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseLivre2" aria-expanded="false" aria-controls="collapseLivre2">
+                  La chromathérapie
+                </a>
+              </p>
+              <div class="collapse" id="collapseLivre2">
+                <div class="card card-body bg-white">
+                  L’influence prédominante des couleurs sur notre comportement, notre organisme et notre vie spirituelle est désormais chose connue. Reflets de nos états d’âme ou de ce que nous désirons montrer de nous, les couleurs de nos vêtements et celles de notre environnement agissent de manière profonde sur notre inconscient, et le plus souvent à notre insu ! C’est pourquoi il est important de connaître les différentes caractéristiques des couleurs, afin de les harmoniser avec notre personnalité, notre milieu, nos comportements et notre mode de vie. Véritable mode d’emploi, cet ouvrage révèle tout ce qu’il y a à savoir sur les couleurs, des implications les plus ancrées dans la vie quotidienne à celles qui touchent aux sphères mystiques. Les couleurs ont la capacité de réparer les déséquilibres physiques, mentaux et spirituels de l’être. Comprendre leur influence sur notre être aide à mieux se connaître, à préparer ses métamorphoses et à programmer des changements dans sa vie. Ce livre présente de nombreuses méthodes pour tirer profit de ces forces énergétiques et mettre un peu de couleur dans sa vie.
 
-              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            </body>
-            </html>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_livre3" class="card-img-top" src="assets/img/livre3.png">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "livre3" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseLivre3" aria-expanded="false" aria-controls="collapseLivre3">
+                  Les chakras
+                </a>
+              </p>
+              <div class="collapse" id="collapseLivre3">
+                <div class="card card-body bg-white">
+                  On parle beaucoup des Chakras mais peu d'entre nous savent ce qu'ils sont réellement.
+  A travers ce livre, vous apprendrez ce que le Tantra, une école philosophique de l'Inde, décrit dans les plus anciens textes qui évoquent les Chakras. Ces définitions, agrémentées des apports de la psychologie et de la biologie, permettent une compréhension globale des Chakras.
+  Puis, le livre détaille chacun d'entre eux, notamment leurs archétypes ainsi que les symptômes physiques et psychologiques de leurs déséquilibres. Des pistes de traitement, via diverses techniques issues du yoga, sont données.
+  Le 2ème Chakra étant fortement impliqué dans les traumatismes et les dépendances aux substances psycho-actives, un accent particulier est mis sur ces deux fléaux de notre société.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_livre4" class="card-img-top" src="assets/img/livre4.png">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "livre4" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseLivre4" aria-expanded="false" aria-controls="collapseLivre4">
+                  Comment ne pas finir comme tes parents
+                </a>
+              </p>
+              <div class="collapse" id="collapseLivre4">
+                <div class="card card-body bg-white">
+                  On parle beaucoup des Chakras mais peu d'entre nous savent ce qu'ils sont réellement.
+  A travers ce livre, vous apprendrez ce que le Tantra, une école philosophique de l'Inde, décrit dans les plus anciens textes qui évoquent les Chakras. Ces définitions, agrémentées des apports de la psychologie et de la biologie, permettent une compréhension globale des Chakras.
+  Puis, le livre détaille chacun d'entre eux, notamment leurs archétypes ainsi que les symptômes physiques et psychologiques de leurs déséquilibres. Des pistes de traitement, via diverses techniques issues du yoga, sont données.
+  Le 2ème Chakra étant fortement impliqué dans les traumatismes et les dépendances aux substances psycho-actives, un accent particulier est mis sur ces deux fléaux de notre société.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 pt-4">
+          <div class="card">
+            <img alt="img_livre5" class="card-img-top" src="assets/img/livre5.png">
+            <div class="card_text_index card-body bg-white text-center text-info">
+              <!-- bouton "livre5" -->
+              <p>
+                <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseLivre5" aria-expanded="false" aria-controls="collapseLivre5">
+                  La loi de l'attraction
+                </a>
+              </p>
+              <div class="collapse" id="collapseLivre5">
+                <div class="card card-body bg-white">
+                  Dans cet ouvrage, les auteurs expliquent comment tout ce qui advient dans notre existence, que nous l'ayons consciemment voulu ou non, est provoqué par cette loi parmi les plus puissantes de l'univers : La Loi de l'Attraction - chaque chose attire ce qui lui ressemble. On connaît tous des dictons tels que "Qui s'assemble se ressemble ", "Qu'il en soit fait selon ta foi "- une croyance n'est qu'une pensée qu'on cultive sans cesse. Mais, même si les plus grands maîtres de l'humanité ont fait allusion à la "loi de l'Attraction", elle n'a jamais été expliquée aussi clairement et en des termes aussi pratiques que dans le présent ouvrage de ces deux auteurs de nombreux best-sellers que sont Esther et Jerry Hicks. Vous découvrirez dans ces pages les lois omniprésentes qui régissent l'Univers et la façon de les mettre en uvre à votre profit. Les connaissances que vous assimilerez élimineront les tâtonnements de votre vie quotidienne. Vous comprendrez enfin tout ce qui survient dans votre existence, de même que dans la vie des personnes qui vous entourent. Ce livre vous aidera à être, à faire et à avoir tout ce que désirez dans la vie, dans la joie
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-12 pt-4">
+        <div class="card">
+          <img alt="img_dreamcatcher" class="card-img-top" src="assets/img/dreamcatcher.png">
+          <div class="card_text_index card-body bg-white text-center text-info">
+            <!-- bouton "dreamcatcher" -->
+            <p>
+              <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapsedreamcatcher" aria-expanded="false" aria-controls="collapsedreamcatcher">
+                Dreamcatcher
+              </a>
+            </p>
+            <div class="collapse" id="collapsedreamcatcher">
+              <div class="card card-body bg-white">
+              Dreamcatcher
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-lg-5 col-md-5 col-12 pt-4">
+        <div class="card">
+          <img alt="img_ouija" class="card-img-top" src="assets/img/ouija.png">
+          <div class="card_text_index card-body bg-white text-center text-info">
+            <!-- bouton "ouija" -->
+            <p>
+              <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseouija" aria-expanded="false" aria-controls="collapseouija">
+                Planche Ouija
+              </a>
+            </p>
+            <div class="collapse" id="collapsedreamcatcher">
+              <div class="card card-body bg-white">
+              Planche Ouija
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-5 col-12 pt-4">
+      <div class="card">
+        <img alt="img_incense" class="card-img-top" src="assets/img/incense.png">
+        <div class="card_text_index card-body bg-white text-center text-info">
+          <!-- bouton "Encens" -->
+          <p>
+            <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseincense" aria-expanded="false" aria-controls="collapseincense">
+              Nos encens
+            </a>
+          </p>
+          <div class="collapse" id="collapseincense">
+            <div class="card card-body bg-white">
+            Encens
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5 col-md-5 col-12 pt-4">
+    <div class="card">
+      <img alt="img_amber" class="card-img-top" src="assets/img/amber.png">
+      <div class="card_text_index card-body bg-white text-center text-info">
+        <!-- bouton amber" -->
+        <p>
+          <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseamber" aria-expanded="false" aria-controls="collapseamber">
+            Bijou en ambre
+          </a>
+        </p>
+        <div class="collapse" id="collapseamber">
+          <div class="card card-body bg-white">
+          Bijou en ambre
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-5 col-md-5 col-12 pt-4">
+  <div class="card">
+    <img alt="img_candle" class="card-img-top" src="assets/img/candles.png">
+    <div class="card_text_index card-body bg-white text-center text-info">
+      <!-- bouton candle" -->
+      <p>
+        <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapsecandle" aria-expanded="false" aria-controls="collapsecandle">
+          Nos bougies parfumées
+        </a>
+      </p>
+      <div class="collapse" id="collapsecandle">
+        <div class="card card-body bg-white">
+        Bougies parfumées
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    </html>
