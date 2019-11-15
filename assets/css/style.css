@@ -11,3 +11,22 @@ h1 {
     font-family: "hobbiton";
     display: block;
 }
+.footerBackground {
+	background-color:#3E4551;
+	color: #FFFFFF;
+
+}
+.footer-copyright {
+	background-color:#323741;
+}
+#logo {
+	flex-direction: column;
+}
+#fb{
+	color: #4267b2;
+	
+}
+#tw {
+	color: #6699FF;
+	
+}
