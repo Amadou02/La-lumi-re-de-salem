@@ -1,4 +1,4 @@
-//cacher les produits
+//cacher fiche produits // les produits
 $(function(){
 $(".product1").hide();
 $(".product2").hide();
@@ -19,4 +19,13 @@ $("#library").click(function(){
 $("#arct").click(function(){
   $(".product4").show();
 });
+$(".potion").hide();
+$(".book").hide();
+$(".weed").hide();
+$(".artefacts").hide();
 });
+//affiche les img_categories
+$(".category").click(function(){
+$(".potion, .book, .weed, .artefacts").show();
+});
+// le panier
