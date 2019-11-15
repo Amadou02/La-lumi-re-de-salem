@@ -1,16 +1,25 @@
-body{
+
+li{
     font-family: "hobbiton";
-    src: url("hobbiton.ttf") format("ttf"),
+    src: url("hobbiton.ttf") format("ttf");
+    font-size: 200%;
+
   }
+
 #image_header {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
 }
 h1 {
     text-align: center;
     font-family: "hobbiton";
     display: block;
 }
+#image_panier {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 5rem;
+}
 /* .product1{
 background-color: red;
-} */
+} *
