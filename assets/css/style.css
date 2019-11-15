@@ -1,4 +1,4 @@
-font-face {
+body{
     font-family: "hobbiton";
     src: url("hobbiton.ttf") format("ttf"),
   }
@@ -11,3 +11,6 @@ h1 {
     font-family: "hobbiton";
     display: block;
 }
+/* .product1{
+background-color: red;
+} */
