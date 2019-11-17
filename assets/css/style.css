@@ -33,9 +33,12 @@ h1 {
 .modal-body{
 	text-align: justify;
 }
-#txt {
+.txt {
 	text-align: justify;
 }
-#At {
+.At {
+	text-align: center;
+}
+.txt2 {
 	text-align: center;
 }
