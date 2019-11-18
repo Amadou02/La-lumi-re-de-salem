@@ -55,3 +55,48 @@ h1 {
 #At {
 	text-align: center;
 }
+/* header */
+/* Footer */
+font-face {
+    font-family: "hobbiton";
+    src: url("hobbiton.ttf") format("ttf");
+    font-size: 200%;
+
+  }
+
+h1 {
+    text-align: center;
+    font-family: "hobbiton";
+    display: block;
+}
+.footerBackground {
+	background-color:#3E4551;
+	color: #FFFFFF;
+
+}
+.footer-copyright {
+	background-color:#323741;
+}
+#logo {
+	flex-direction: column;
+}
+#fb{
+	size: 20px;
+
+}
+#tw {
+	size: 20px;
+
+}
+.modal-body{
+	text-align: justify;
+}
+.txt {
+	text-align: justify;
+}
+.At {
+	text-align: center;
+}
+.txt2 {
+	text-align: center;
+}
