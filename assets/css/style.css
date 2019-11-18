@@ -9,7 +9,8 @@
 }
 
 
-li{
+
+/* li{
     font-family: "hobbiton";
     src: url("hobbiton.ttf") format("ttf");
     font-size: 200%;
@@ -54,12 +55,12 @@ h1 {
 }
 #At {
 	text-align: center;
-}
+} */
 /* header */
 /* Footer */
 font-face {
     font-family: "hobbiton";
-    src: url("hobbiton.ttf") format("ttf"),
+    src: url("../css/hobbiton.ttf") format("ttf"),
   }
 #image_header {
     width: 100%;
@@ -100,4 +101,7 @@ h1 {
 }
 .txt2 {
 	text-align: center;
+}
+.textalign{
+  text-align: center;
 }

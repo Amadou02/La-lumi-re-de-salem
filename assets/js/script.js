@@ -6,7 +6,7 @@ var MyCart = {
 	ProductPrice : [],
 	ProductName : [],
 	ProductQuantity : [],
-
+// ajout au panier
 	Add : function (Id, ProductPrice, ProductName) {
 
 		this.ProductId[Id] = Id;
@@ -17,7 +17,7 @@ var MyCart = {
 		this.RefreshButtons()
 
 	},
-
+// fonction supprimer du panier
 	Remove : function (Id) {
 
 		// code pour enlever le produit
@@ -45,7 +45,7 @@ var MyCart = {
 		}
 
 	},
-
+// mise a jours du panier
 	RefreshButtons : function () {
 
 		var ProductTotalPrice = 0;
@@ -90,7 +90,7 @@ var MyCart = {
 
 }
 
-
+// fin du panier
 //cacher fiche produits // les produits
 
 $(function(){
@@ -133,7 +133,8 @@ $(function(){
 $(".category").click(function(){
 	$(".potion, .book, .weed, .artefacts").show();
 });
-//header animation
+//header animation()
+
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
 var sparkles=100;// increase of decrease for number of sparkles falling
 
@@ -393,3 +394,4 @@ function newColour() {
     c.sort(function(){return (0.5 - Math.random());});
     return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
 }
+//bloquer le scrollL
