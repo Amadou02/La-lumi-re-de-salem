@@ -1,3 +1,95 @@
+// le panier
+
+var MyCart = {
+
+  ProductId : [],
+  ProductPrice : [],
+  ProductName : [],
+  ProductQuantity : [],
+
+  Add : function (Id, ProductPrice, ProductName) {
+
+    this.ProductId[Id] = Id;
+    this.ProductPrice[Id] = ProductPrice;
+    this.ProductName[Id] = ProductName;
+    this.ProductQuantity[Id] = (this.ProductQuantity[Id] ? this.ProductQuantity[Id] + 1 : 1);
+
+    this.RefreshButtons()
+
+  },
+
+  Remove : function (Id) {
+
+    // code pour enlever le produit
+
+    delete this.ProductId[Id];
+    delete this.ProductPrice[Id];
+    delete this.ProductName[Id];
+    delete this.ProductQuantity[Id];
+
+    this.RefreshButtons();
+    this.RefreshList();
+
+  },
+
+  SetQuantity : function (Id, Quantity) {
+
+    this.ProductQuantity[Id] += Quantity
+    this.RefreshList();
+    this.RefreshButtons();
+
+    if (this.ProductQuantity[Id] == 0) {
+
+      this.Remove(Id);
+
+    }
+
+  },
+
+  RefreshButtons : function () {
+
+    var ProductTotalPrice = 0;
+    var ProductTotalPriceWithQuantity = 0;
+    var ProductNb = 0;
+
+    for (var i in this.ProductId){
+
+      ProductNb++;
+      ProductTotalPrice += this.ProductPrice[i];
+      ProductTotalPriceWithQuantity += this.ProductPrice[i] * this.ProductQuantity[i];
+
+    }
+
+    document.getElementById('btn-showcart').value = "mon panier (" + ProductNb + " - " + ProductTotalPriceWithQuantity + "€)";
+    document.getElementById('input-btnpurchase').value = "Passez votre commande (" + ProductTotalPriceWithQuantity + "€)";
+
+  },
+
+  RefreshList : function () {
+
+    var ListHtml = "";
+
+    for (var i in this.ProductId){
+
+      ListHtml += "<p>";
+      ListHtml += "x" + this.ProductQuantity[i] + " ";
+      ListHtml += this.ProductName[i];
+      ListHtml += " (" + this.ProductPrice[i] + "€)";
+      ListHtml += " - <a href=\"javascript:MyCart.Remove('" + i + "');\">Enlever du panier</a>";
+      ListHtml += " <a href=\"javascript:MyCart.SetQuantity('" + i + "', 1);\">+1</a>";
+      ListHtml += " <a href=\"javascript:MyCart.SetQuantity('" + i + "', -1);\">-1</a>";
+      ListHtml += "</p>";
+
+      //ListHtml += "<p>" + this.ProductName[i] + " (" + this.ProductPrice[i] + "€) - <a href=\"javascript:MyCart.Remove('" + i + "');\">Enlever du panier</a></p>";
+
+    }
+
+    document.getElementById('cartlist').innerHTML = ListHtml;
+
+  }
+
+}
+
 //cacher fiche produits // les produits
 $(function(){
 $(".product1").hide();
