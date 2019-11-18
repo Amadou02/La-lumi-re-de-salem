@@ -31,26 +31,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#Accueil">Accueil <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Decoctions">Décoctions</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Herboristerie">Herboristerie</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Librairie">Librairie</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Artefacts</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#"></a>
       </li>
     </ul>
-    <input type="button" id="btn-showcart" class="btn btn-primary" value="mon panier (vide)" onclick="javascript:MyCart.RefreshList();" data-toggle="modal" data-target="#exampleModal" />
+    <input type="button" id="btn-showcart" class="btn btn-success" value="mon panier (vide)" onclick="javascript:MyCart.RefreshList();" data-toggle="modal" data-target="#exampleModal" />
 
     <!--modal début-->
 
@@ -62,10 +48,10 @@
   </div>
 </nav>
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+  <div class="modal-dialog bg-info" role="document">
+    <div class="modal-content bg-white">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Votre panier</h5>
+        <h5 class="modal-title text-info" id="exampleModalLabel">Votre panier</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -74,8 +60,8 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <input type="button" class="btn btn-primary" id="input-btnpurchase" value="Passez votre commande" />
+        <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+        <input type="button" class="btn btn-info" id="input-btnpurchase" value="Passez votre commande" />
       </div>
     </div>
   </div>
@@ -89,17 +75,7 @@
         <div class="card">
           <img alt="img_newproduct" class="card-img-top" src="assets/img/cristaux.jpg">
           <div class="card_text_index card-body bg-white text-center text-info">
-            <!-- bouton "nouveaux produits" -->
-            <p>
-              <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseNewItems" aria-expanded="false" aria-controls="collapseNewItems">
-                Nos nouveaux produits
-              </a>
-            </p>
-            <div class="collapse" id="collapseNewItems">
-              <div class="card card-body">
-                Derniers ajouts produits
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -108,17 +84,7 @@
         <div class="card">
           <img alt="img_flash" class="card-img-top" src="assets/img/fireworks.jpg">
           <div class="card_text_index card-body bg-white text-center text-info">
-            <!-- bouton "ventes flash" -->
-            <p>
-              <a class="btn btn-info btn-lg" data-toggle="collapse" href="#collapseFlash" aria-expanded="false" aria-controls="collapseFlash">
-                Ventes flash!
-              </a>
-            </p>
-            <div class="collapse" id="collapseFlash">
-              <div class="card card-body">
-                Voir
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -129,7 +95,7 @@
           <div class="card_text_index card-body bg-white text-center text-info">
             <!-- bouton "catégories" -->
             <p>
-              <a class="btn btn-info btn-lg category" data-toggle="collapse" href="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
+              <a class="btn btn-info btn-lg category"  href="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
                 Catégories
               </a>
             </p>
@@ -141,7 +107,7 @@
           </div>
         </div>
       </div>
-      <div class="subCat">
+      <div class="card-group mt-4">
         <div class="row justify-content-around">
           <div class="col potion">
             <div class="card">
@@ -153,11 +119,7 @@
                     Décoctions
                   </a>
                 </p>
-                <div class="collapse" id="collapsePotion">
-                  <div class="card card-body">
-                    Voir
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -171,11 +133,7 @@
                     Herboristerie
                   </a>
                 </p>
-                <div class="collapse" id="collapseHerb">
-                  <div class="card card-body">
-                    Nos herbes séchées
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -189,11 +147,7 @@
                     Librairie
                   </a>
                 </p>
-                <div class="collapse" id="collapseLibrary">
-                  <div class="card card-body">
-                    Nos ouvrages
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -207,17 +161,14 @@
                     Artefacts
                   </a>
                 </p>
-                <div class="collapse" id="collapseArtefacts">
-                  <div class="card card-body">
-                    Nos produits
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="card-group m-auto">
     <div class="product1">
       <h3>LES DECOCTIONS</h3>
       <div class="row justify-content-around">
@@ -229,7 +180,6 @@
               <p>Le mélange d'herbe magique du Dragon favorisera les dénouements. Il est souvent utilisé dans les rituel de banissement.</p>
               <span id="ref01">ref : 01</span>
               <span id="prix1">prix : 1.5 ~M~</span>
-              <button type="button" class="btn btn-dark">+ d'infos</button>
               <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product1', 15, 'La poudre de dragon');">Ajouter au panier</button>
             </div>
           </div>
@@ -242,7 +192,6 @@
               <p>Le secret des Druides apporte Force, Courage et vitalité. Ce mélange d'herbes magiques est également souvent utilisé dans les rituel de guérison.</p>
               <span id="ref02">ref : 02</span>
               <span id="prix2">prix : 2.5 ~M~</span>
-              <button type="button" class="btn btn-dark">+ d'infos</button>
               <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product2', 10, 'Herbes aux Druides');">Ajouter au panier</button>
             </div>
           </div>
@@ -255,7 +204,6 @@
               <p>Le mélange Graine d'Amour favorisera les rencontres amoureuses ou vous aidera à stimuler une amitiés, ou raviver la flamme amoureuse d'un couple.</p>
               <span id="ref03">ref : 03</span>
               <span id="prix3">prix : 2.5 ~M~</span>
-              <button type="button" class="btn btn-dark">+ d'infos</button>
               <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product3', 8, 'Graine d\'Amour');">Ajouter au panier</button>
             </div>
           </div>
@@ -272,7 +220,6 @@
               </p>
               <span id="ref04">ref : 04</span>
               <span id="prix4">prix : 4.5 ~M~</span>
-              <button type="button" class="btn btn-dark">+ d'infos</button>
               <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product4', 7, 'Le Saugée');">Ajouter au panier</button>
             </div>
           </div>
@@ -290,13 +237,13 @@
               <span id="ref05">ref : 05</span>
 
               <span id="prix5">prix : 6.5 ~M~</span>
-              <button type="button" class="btn btn-dark">+ d'infos</button>
               <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product5', 45, 'Hypocras');">Ajouter au panier</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- debut herboristerie -->
   <div class="product2">
@@ -311,7 +258,6 @@
             <span id="ref06">ref : 06</span>
 
             <span id="prix6">prix : 2.5 ~M~</span>
-            <button type="button" class="btn btn-dark">+ d'infos</button>
             <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product6', 2.5, 'La racine de mandragore');">Ajouter au panier</button>
           </div>
         </div>
@@ -325,7 +271,6 @@
             <span id="ref07">ref : 07</span>
             <br />
             <span id="prix7">prix : 2.5 ~M~</span>
-            <button type="button" class="btn btn-dark">+ d'infos</button>
             <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product7', 2.5, 'Absinthe');">Ajouter au panier</button>
           </div>
         </div>
@@ -338,7 +283,6 @@
             <p>Herbe des anges est une plante précieuse employée par l'homme depuis des siècles pour éloigner les influences néfastes...</p>
             <span id="ref08">ref : 08</span>
             <span id="prix8">prix : 2.5 ~M~</span>
-            <button type="button" class="btn btn-dark">+ d'infos</button>
             <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product8', 2.5, 'Racine d\'angélique');">Ajouter au panier</button>
           </div>
         </div>
@@ -354,7 +298,6 @@
             <span id="ref09">ref : 09</span>
             <br />
             <span id="prix9">prix : 2.5 ~M~</span>
-            <button type="button" class="btn btn-dark">+ d'infos</button>
             <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product9', 2.5, 'Citronnelle');">Ajouter au panier</button>
           </div>
         </div>
@@ -370,7 +313,6 @@
             <span id="ref10">ref : 10</span>
             <br />
             <span id="prix10">prix : 2.5 ~M~</span>
-            <button type="button" class="btn btn-dark">+ d'infos</button>
             <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product10', 2.5, 'Lavande');">Ajouter au panier</button>
           </div>
         </div>
@@ -390,7 +332,6 @@
             </p>
             <span id="ref11">ref : 11</span>
             <span id="prix11">prix : 10 ~M~</span>
-            <button type="button" class="btn btn-dark">+ d'infos</button>
             <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product11', 10, 'La chromathérapie');">Ajouter au panier</button>
           </div>
         </div>
@@ -407,7 +348,6 @@
               <span id="ref12">ref : 12</span>
               <br />
               <span id="prix12">prix : 10 ~M~</span>
-              <button type="button" class="btn btn-dark">+ d'infos</button>
               <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product12', 10, 'Les chakras');">Ajouter au panier</button>
             </div>
           </div>
@@ -424,7 +364,6 @@
                 <span id="ref13">ref : 13</span>
                 <br />
                 <span id="prix13">prix : 10 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product13', 10, 'Comment ne pas finir comme tes parents');">Ajouter au panier</button>
               </div>
             </div>
@@ -440,7 +379,6 @@
                 <span id="ref14">ref : 14</span>
                 <br />
                 <span id="prix14">prix : 10 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product14', 10, 'Les huiles essentielles');">Ajouter au panier</button>
               </div>
             </div>
@@ -456,7 +394,6 @@
                 <span id="ref15">ref : 15</span>
                 <br />
                 <span id="prix15">prix : 10 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product15', 10, 'Les lois de l\'attraction');">Ajouter au panier</button>
               </div>
             </div>
@@ -478,7 +415,6 @@
                 <span id="ref16">ref : 16</span>
                 <br />
                 <span id="prix16">prix : 15 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product16', 15, 'Dreamcatcher');">Ajouter au panier</button>
               </div>
             </div>
@@ -491,7 +427,6 @@
                 <p>Planche Ouija</p>
                 <span id="ref17">ref : 17</span>
                 <span id="prix17">prix : 25 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product17', 25, 'Ouija');">Ajouter au panier</button>
               </div>
             </div>
@@ -505,7 +440,6 @@
                 <span id="ref18">ref : 18</span>
                 <br />
                 <span id="prix18">prix : 10 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product18', 10, 'Bijou en ambre');">Ajouter au panier</button>
               </div>
             </div>
@@ -521,7 +455,6 @@
                 <span id="ref19">ref : 19</span>
                 <br />
                 <span id="prix19">prix : 4.5 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product19', 4.5, 'Bougies parfumées');">Ajouter au panier</button>
               </div>
             </div>
@@ -536,7 +469,6 @@
                 </p>
                 <span id="ref20">ref : 20</span>
                 <span id="prix20">prix : 2.5 ~M~</span>
-                <button type="button" class="btn btn-dark">+ d'infos</button>
                 <button type="button" class="btn btn-dark" onclick="javscript:MyCart.Add('product20', 2.5, 'Encens');">Ajouter au panier</button>
               </div>
             </div>
