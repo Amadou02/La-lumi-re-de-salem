@@ -2,138 +2,125 @@
 
 var MyCart = {
 
-	ProductId : [],
-	ProductPrice : [],
-	ProductName : [],
-	ProductQuantity : [],
+  ProductId : [],
+  ProductPrice : [],
+  ProductName : [],
+  ProductQuantity : [],
 
-	Add : function (Id, ProductPrice, ProductName) {
+  Add : function (Id, ProductPrice, ProductName) {
 
-		this.ProductId[Id] = Id;
-		this.ProductPrice[Id] = ProductPrice;
-		this.ProductName[Id] = ProductName;
-		this.ProductQuantity[Id] = (this.ProductQuantity[Id] ? this.ProductQuantity[Id] + 1 : 1);
+    this.ProductId[Id] = Id;
+    this.ProductPrice[Id] = ProductPrice;
+    this.ProductName[Id] = ProductName;
+    this.ProductQuantity[Id] = (this.ProductQuantity[Id] ? this.ProductQuantity[Id] + 1 : 1);
 
-		this.RefreshButtons()
+    this.RefreshButtons()
 
-	},
+  },
 
-	Remove : function (Id) {
+  Remove : function (Id) {
 
-		// code pour enlever le produit
+    // code pour enlever le produit
 
-		delete this.ProductId[Id];
-		delete this.ProductPrice[Id];
-		delete this.ProductName[Id];
-		delete this.ProductQuantity[Id];
+    delete this.ProductId[Id];
+    delete this.ProductPrice[Id];
+    delete this.ProductName[Id];
+    delete this.ProductQuantity[Id];
 
-		this.RefreshButtons();
-		this.RefreshList();
+    this.RefreshButtons();
+    this.RefreshList();
 
-	},
+  },
 
-	SetQuantity : function (Id, Quantity) {
+  SetQuantity : function (Id, Quantity) {
 
-		this.ProductQuantity[Id] += Quantity
-		this.RefreshList();
-		this.RefreshButtons();
+    this.ProductQuantity[Id] += Quantity
+    this.RefreshList();
+    this.RefreshButtons();
 
-		if (this.ProductQuantity[Id] == 0) {
+    if (this.ProductQuantity[Id] == 0) {
 
-			this.Remove(Id);
+      this.Remove(Id);
 
-		}
+    }
 
-	},
+  },
 
-	RefreshButtons : function () {
+  RefreshButtons : function () {
 
-		var ProductTotalPrice = 0;
-		var ProductTotalPriceWithQuantity = 0;
-		var ProductNb = 0;
+    var ProductTotalPrice = 0;
+    var ProductTotalPriceWithQuantity = 0;
+    var ProductNb = 0;
 
-		for (var i in this.ProductId){
+    for (var i in this.ProductId){
 
-			ProductNb++;
-			ProductTotalPrice += this.ProductPrice[i];
-			ProductTotalPriceWithQuantity += this.ProductPrice[i] * this.ProductQuantity[i];
+      ProductNb++;
+      ProductTotalPrice += this.ProductPrice[i];
+      ProductTotalPriceWithQuantity += this.ProductPrice[i] * this.ProductQuantity[i];
 
-		}
+    }
 
-		document.getElementById('btn-showcart').value = "mon panier (" + ProductNb + " - " + ProductTotalPriceWithQuantity + "€)";
-		document.getElementById('input-btnpurchase').value = "Passez votre commande (" + ProductTotalPriceWithQuantity + "€)";
+    document.getElementById('btn-showcart').value = "mon panier (" + ProductNb + " - " + ProductTotalPriceWithQuantity + "€)";
+    document.getElementById('input-btnpurchase').value = "Passez votre commande (" + ProductTotalPriceWithQuantity + "€)";
 
-	},
+  },
 
-	RefreshList : function () {
+  RefreshList : function () {
 
-		var ListHtml = "";
+    var ListHtml = "";
 
-		for (var i in this.ProductId){
+    for (var i in this.ProductId){
 
-			ListHtml += "<p>";
-			ListHtml += "x" + this.ProductQuantity[i] + " ";
-			ListHtml += this.ProductName[i];
-			ListHtml += " (" + this.ProductPrice[i] + "€)";
-			ListHtml += " - <a href=\"javascript:MyCart.Remove('" + i + "');\">Enlever du panier</a>";
-			ListHtml += " <a href=\"javascript:MyCart.SetQuantity('" + i + "', 1);\">+1</a>";
-			ListHtml += " <a href=\"javascript:MyCart.SetQuantity('" + i + "', -1);\">-1</a>";
-			ListHtml += "</p>";
+      ListHtml += "<p>";
+      ListHtml += "x" + this.ProductQuantity[i] + " ";
+      ListHtml += this.ProductName[i];
+      ListHtml += " (" + this.ProductPrice[i] + "€)";
+      ListHtml += " - <a href=\"javascript:MyCart.Remove('" + i + "');\">Enlever du panier</a>";
+      ListHtml += " <a href=\"javascript:MyCart.SetQuantity('" + i + "', 1);\">+1</a>";
+      ListHtml += " <a href=\"javascript:MyCart.SetQuantity('" + i + "', -1);\">-1</a>";
+      ListHtml += "</p>";
 
-			//ListHtml += "<p>" + this.ProductName[i] + " (" + this.ProductPrice[i] + "€) - <a href=\"javascript:MyCart.Remove('" + i + "');\">Enlever du panier</a></p>";
+      //ListHtml += "<p>" + this.ProductName[i] + " (" + this.ProductPrice[i] + "€) - <a href=\"javascript:MyCart.Remove('" + i + "');\">Enlever du panier</a></p>";
 
-		}
+    }
 
-		document.getElementById('cartlist').innerHTML = ListHtml;
+    document.getElementById('cartlist').innerHTML = ListHtml;
 
-	}
+  }
 
 }
 
-
 //cacher fiche produits // les produits
-
 $(function(){
-	$(".product1").hide();
-	$(".product2").hide();
-	$(".product3").hide();
-	$(".product4").hide();
+$(".product1").hide();
+$(".product2").hide();
+$(".product3").hide();
+$(".product4").hide();
 });
-
-
 //afficher les produits
-
 $(function(){
-
-	$("#decoc").click(function(){
-		$(".product1").show();
-	});
-
-	$("#herbe").click(function(){
-		$(".product2").show();
-	});
-
-	$("#library").click(function(){
-		$(".product3").show();
-	});
-
-	$("#arct").click(function(){
-		$(".product4").show();
-	});
-
-	$(".potion").hide();
-	$(".book").hide();
-	$(".weed").hide();
-	$(".artefacts").hide();
+$("#decoc").click(function(){
+  $(".product1").show();
 });
-
-
+$("#herbe").click(function(){
+  $(".product2").show();
+});
+$("#library").click(function(){
+  $(".product3").show();
+});
+$("#arct").click(function(){
+  $(".product4").show();
+});
+$(".potion").hide();
+$(".book").hide();
+$(".weed").hide();
+$(".artefacts").hide();
+});
 //affiche les img_categories
-
 $(".category").click(function(){
-	$(".potion, .book, .weed, .artefacts").show();
+$(".potion, .book, .weed, .artefacts").show();
 });
-//header animation
+
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
 var sparkles=100;// increase of decrease for number of sparkles falling
 
